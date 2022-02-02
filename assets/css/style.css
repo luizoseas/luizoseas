@@ -4,23 +4,19 @@
     padding: 0;
     border:0;
 }
-.header{
+body{
     background-color: #EFEFEF;
+}
+.header{
     height: 100vh;
     width: 100%;
     font-family: 'Fredoka One', cursive;
     font-weight: bold;
 }
-.header .tab{
-    display:flex;
-    justify-content: space-between;
-    padding:5vh 10vh;
-    align-items: center;
-}
 .header .tab .lang a{
-    font-size: 3vh;
+    font-size: 20px;
     color: #B1B1B1;
-    padding: 0 1vh;
+    margin: 0 10px;
     cursor: pointer;
     text-decoration: none;
 }
@@ -30,28 +26,79 @@
 .header .tab .logo img{
     width: 20vh;
 }
-.header .body{
-    display: flex;
-    padding: 10vh 17vh;
+@media screen and (max-width: 1300px){
+    .header .body{
+        display: flex;
+        flex-direction: column;
+        flex-flow: wrap-reverse;
+        padding: 1rem 1rem;
+        justify-content: center;
+    }
+    .header .body .desc h1{
+        font-size: 5vh;
+        color:#4B4B4B;
+        text-align: center;
+    }
+    .header .body .photo img{
+        width: 13rem;
+        height: 13rem;
+        border-radius:100%;
+        border:3px solid #666666;
+    }
 }
-.header .body .desc h1{
-    font-size: 5.5vh;
-    color:#4B4B4B;
+@media screen and (min-width: 901px) {
+    .header .tab{
+        display:flex;
+        justify-content: space-between;
+        align-items: center;
+        margin:1rem 5rem;
+    }
+    .header .body .desc h3{
+        text-align: justify;
+        font-size: 25px;
+        color:#806C6C;
+        padding: 2rem 10rem;
+    } 
 }
-.header .body .desc h3{
-    text-align: right;
-    font-size: 3.9vh;
-    color:#806C6C;
-    padding: 8vh 3vh
+@media screen and (max-width: 900px) {
+    .header .tab{
+        display:flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1rem 15px;
+    }
+    .header .body .desc h3{
+        text-align: justify;
+        font-size: 23px;
+        color:#806C6C;
+        padding: 25px 0;
+    } 
 }
-.header .body .photo img{
-    width: 25vh;
-    height: 25vh;
-    border-radius:100%;
-    border:3px solid #666666;
+@media screen and (min-width: 1301px){
+    .header .body{
+        display: flex;
+        padding: 5rem 15rem;
+    }
+    .header .body .desc h1{
+        font-size: 5.5vh;
+        color:#4B4B4B;
+    }
+    .header .body .desc h3{
+        text-align: right;
+        font-size: 3.9vh;
+        color:#806C6C;
+        padding: 8vh 3vh
+    }
+    .header .body .photo img{
+        width: 25vh;
+        height: 25vh;
+        border-radius:100%;
+        border:3px solid #666666;
+    }
 }
 .socialmedia{
     text-align: center;
+    width: 100%;
 }
 .socialmedia img{
     width: 5vh;
